@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('code-pulling') {
             steps {
-                sh 'git clone https://github.com/abhay9175/student-ui.git'
+                git branch: 'main', credentialsId: 'mohitjen', url: 'https://github.com/abhay9175/student-ui.git'
             }
         }
         stage('build-maven') {
