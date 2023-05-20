@@ -5,7 +5,7 @@ pipeline {
         stages {
             stage('pull code'){
                 steps {
-                gitcheckout(
+                gitCheckout(
                     branch: 'master',
                     url: "https://github.com/abhay9175/student-ui.git"
                 )
