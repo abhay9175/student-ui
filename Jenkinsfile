@@ -1,4 +1,4 @@
-@Library('jenkins-sharedlibrary-mrdevopsproject') _
+@Library('jenkins-sharedlibrary') _
 
 pipeline {
     agent any
