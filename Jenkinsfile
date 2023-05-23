@@ -21,6 +21,7 @@ pipeline {
                 steps {
                     script{
                         mvnintegrationTest()
+                    }   
                 }
             }
         }
