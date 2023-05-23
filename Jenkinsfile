@@ -3,7 +3,7 @@
 pipeline {
     agent any
         stages {
-            stage('pull code'){
+            stage('pull code') {
                 steps {
                 gitcheckout(
                     branch: 'master',
@@ -11,17 +11,17 @@ pipeline {
                 )
                 }
             }
-            stage('unit test mvn'){
+            stage('unit test mvn') {
                 steps {
                     script{
                         mvnTest()
                 }
             }
-            stage('integration test mvn'){
+            stage('integration test mvn') {
                 steps {
                     script{
                         mvnintegrationTest()
-                    }   
+                    }    
                 }
             }
         }
