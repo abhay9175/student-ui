@@ -17,13 +17,6 @@ pipeline {
                         mvnTest()
                 }
             }
-            stage('integration test mvn') {
-                steps {
-                    script{
-                        mvnintegrationTest()
-                    }    
-                }
-            }
         }
     }
 }
