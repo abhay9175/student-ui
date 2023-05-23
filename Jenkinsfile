@@ -2,26 +2,24 @@
 
 pipeline {
     agent any
-        stages {
-            stage('pull code'){
-              steps {
-                gitcheckout(
-                    branch: 'master',
+    stages {
+        stage('pull code') {
+            steps {
+                git branch: 'master',
                     url: "https://github.com/abhay9175/student-ui.git"
-                )
+            }
+        }
+        stage('unit test mvn') {
+            steps {
+                script {
+                    mvnTest()
                 }
             }
-            stage('unit test mvn') {
-              steps {
-                    script{
-                        mvnTest()
-                }
-            }
-            stage('integration test mvn'){
-                steps {
-                    script{
-                        mvnintegrationTest()
-                    }
+        }
+        stage('integration test mvn') {
+            steps {
+                script {
+                    mvnIntegrationTest()
                 }
             }
         }
